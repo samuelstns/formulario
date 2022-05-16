@@ -1,0 +1,37 @@
+<h2>{{ title }}</h2>
+<hr />
+
+<section id="form">
+    <form (ngSubmit)="onSubmit()" #formTask="ngForm">
+      <div class="form-group">
+        <label>Nome Projeto</label>
+        <textarea [(ngModel)]="task.nomep" name="nomep" rows="1" class="form-control"></textarea>
+      </div>
+      <div>
+          <label class="mt-1 form-controla">Data inicio do projeto: </label>
+          <input type="date" model="datai" class="form-controlt">
+      </div>
+      <div>
+        <label class="mt-3 form-controla">Data final do projeto: </label>
+        <input type="date" model="dataf" class="form-controlt">
+      </div>
+      <div class="mt-3 form-group">
+        <label>Valor do Projeto</label>
+        <textarea [(ngModel)]="task.valor" name="valor" rows="1" class="form-control"></textarea>
+      </div>
+      <div class="form-group col-mt-4">
+        <label for="inputEstado">Risco</label>
+        <select id="inputEstado" class="form-controlt">
+          <option selected>0-baixo</option>
+          <option>1-médio</option>
+          <option>2-alto</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Participantes</label>
+        <textarea [(ngModel)]="task.participante" name="participante" rows="3" class="form-control"></textarea>
+      </div>
+    <button type="submit" class="mt-3 btn btn-primary mr-2">Salvar</button>
+    <button type="button" class="mt-3 btn btn-secondary" [routerLink]="['']">Cancelar</button>
+    </form>
+</section>

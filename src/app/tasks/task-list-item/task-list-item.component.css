@@ -1,0 +1,6 @@
+.task-completed{
+  text-decoration: line-through;
+}
+.task-item-nomep{
+  flex-grow: 1;
+}

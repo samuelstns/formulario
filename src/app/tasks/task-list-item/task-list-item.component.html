@@ -1,0 +1,17 @@
+<div [innerHTML]="task.nomep" class="task-item-nomep">
+</div>
+<div>
+ <button type="button" [routerLink]="['/edit', task.nomep]" class="btn btn-primary mr-1">
+   Alterar
+ </button>
+ </div>
+ <div>
+ <button type="button" class="btn btn-danger mr-1" (click)="(task)">
+   Excluir
+ </button>
+ </div>
+ <div>
+ <button type="button" class="btn btn-success">
+   Calcular lucro
+ </button>
+ </div>
